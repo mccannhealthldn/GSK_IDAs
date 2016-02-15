@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+/*----- TABS -----*/
+
+.tabs-9-3 {
+  position: relative;   
+  min-height: 287px;
+  clear: both;
+  margin: 50px 0 25px;
+  text-align: center;
+}
+.tab-9-3  {
+  float: left;
+  display: inline-block;
+}
+
+.tab-9-3 label {
+  padding: 10px; 
+  border: 1px solid #000;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0; 
+  margin-left: -1px; 
+  position: relative;
+  top: -30px;
+  -webkit-transition: background-color .17s linear;
+  width: 163px;
+}
+
+.tab-9-3 [type=radio] {
+  display: none;   
+}
+
+.tab-content-9-3 {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: 1px solid #000; 
+  opacity: 0;
+}
+[type=radio]:checked ~ label {
+  background: rgba(85, 85, 85, 0.15);
+  z-index: 2;
+  font-style: italic;
+}
+ 
+[type=radio]:checked ~ label ~ .tab-content-9-3 {
+  z-index: 1;
+  opacity: 1;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="tabs-9-3">			    
+   <div class="tab-9-3">
+       <input type="radio" id="tab-9-3-1" name="tab-group-9-3" checked>
+       <label for="tab-9-3-1">TAB 1</label>
+       <div class="tab-content-9-3">
+           CONTENT FOR TAB 1
+       </div> 
+   </div>			    
+   <div class="tab-9-3">
+       <input type="radio" id="tab-9-3-2" name="tab-group-9-3">
+       <label for="tab-9-3-2">TAB 2</label>
+       <div class="tab-content-9-3">
+           CONTENT FOR TAB 2
+       </div> 
+   </div>
+   <div class="tab-9-3">
+       <input type="radio" id="tab-9-3-3" name="tab-group-9-3">
+       <label for="tab-9-3-3">TAB 3</label>			     
+       <div class="tab-content-9-3">
+           CONTENT FOR TAB 3
+       </div> 
+   </div>
+   <div class="tab-9-3">
+       <input type="radio" id="tab-9-3-4" name="tab-group-9-3">
+       <label for="tab-9-3-4">TAB 4</label>			     
+       <div class="tab-content-9-3">
+           CONTENT FOR TAB 4
+       </div> 
+   </div>
+   <div class="tab-9-3">
+       <input type="radio" id="tab-9-3-5" name="tab-group-9-3">
+       <label for="tab-9-3-5">TAB 5</label>			     
+       <div class="tab-content-9-3">
+           CONTENT FOR TAB 5
+       </div> 
+   </div>			    
+</div>
+
+</body>
+
+</html>

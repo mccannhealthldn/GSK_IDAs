@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+/*----- TEXT SLIDER -----*/
+
+.slides {
+    padding: 0;
+    width: 595px;
+    height: 420px;
+    display: block;
+    margin: 20px auto 0;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    top: 50px;
+    opacity: 0;
+    width: 400px;
+    margin-left: 108px;
+    display: block;
+    position: absolute;
+    transform: scale(0);
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 108px;
+    display: none;
+    position: absolute;
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+    text-align: center;
+    opacity: 1;
+    top: 60px;
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container .slide {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+	width: 100%;
+	top: 9px;
+	height: 11px;
+	display: block;
+	position: absolute;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.nav-dots .nav-dot {
+	top: -15px;
+	width: 6px;
+	height: 6px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background: none;
+	border: 1px solid #000;
+}
+
+.nav-dots .nav-dot:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 1);
+}
+
+input#img-14-4-2:checked ~ .nav-dots label#img-dot-14-4-2{
+	background: rgba(0, 0, 0, 1);
+}
+
+</style>
+
+</head>
+<body>
+
+<ul class="slides">
+    <input type="radio" name="radio-btn-14-4" id="img-14-4-1" checked />
+    <li class="slide-container">
+		<div class="slide">
+			<p>Slide 1</p>
+        </div>
+		<div class="nav">
+			<label for="img-14-4-2" class="next">></label>
+		</div>
+    </li>
+    <input type="radio" name="radio-btn-14-4" id="img-14-4-2" />
+    <li class="slide-container">
+        <div class="slide">
+          <p>Slide 2</p>
+        </div>
+		<div class="nav">
+			<label for="img-14-4-1" class="prev"><</label>
+			<label for="img-14-4-3" class="next">></label>
+		</div>
+    </li>
+    <input type="radio" name="radio-btn-14-4" id="img-14-4-3" />
+    <li class="slide-container">
+        <div class="slide">
+          <p>Slide 3</p>
+        </div>
+    	<div class="nav">
+    		<label for="img-14-4-2" class="prev"><</label>
+    	</div>
+    </li>
+    <li class="nav-dots">
+      <label for="img-14-4-1" class="nav-dot" id="img-dot-14-4-1"></label>
+      <label for="img-14-4-2" class="nav-dot" id="img-dot-14-4-2"></label>
+      <label for="img-14-4-3" class="nav-dot" id="img-dot-14-4-3"></label>
+    </li>
+</ul>
+
+</body>
+</html>
